@@ -1,0 +1,145 @@
+:root {
+    --header-color: #6874A4;
+    --section-color: #2a1c33;
+    --other-color: rgb(45, 45, 45);
+    --accent-color: #B379AE;
+}
+
+body {
+    margin: 0px;
+    color: white;
+    font-family: sans-serif;
+}
+
+header {
+    overflow: hidden;
+    font-family: "Figtree", sans-serif;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-color: var(--header-color);
+}
+
+header p {
+    width: auto;
+    font-size: 140px;
+    opacity: 0;
+    margin: auto;
+    color: white;
+    text-shadow: 0px 0px 40px #00c1cf;
+    animation: slidein 0.7s 0.3s forwards;
+}
+
+@keyframes slidein {
+    0% { 
+        opacity: 0; 
+        padding-left: 100px;
+    }
+    100% { 
+        opacity: 1; 
+        padding-left: auto; 
+    }
+}
+
+header .gradient {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, #6874A4 95%, #6874A4 100%), url(moonlight.png) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 400px;
+    animation: fadein 1s forwards;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+section {
+    background-color: var(--section-color);
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 150px;
+    border-top: 5px solid grey;
+}
+
+section h2 {
+    opacity: 0;
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+    animation: sectionslide 0.7s 0.5s forwards;
+}
+
+section p {
+    opacity: 0;
+    font-size: 24px;
+    animation: sectionslide2 0.7s 0.5s forwards;
+}
+
+@keyframes sectionslide {
+    0% { 
+        opacity: 0; 
+        padding-top: 100px;
+    }
+    100% { 
+        opacity: 1; 
+        padding-top: 0px; 
+    }
+}
+
+@keyframes sectionslide2 {
+    0% { 
+        opacity: 0; 
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+
+.vid {
+    display: flex;
+}
+
+.vid iframe {
+    opacity: 0;
+    animation: sectionslide2 0.7s 0.5s forwards;
+}
+
+.links ul {
+    opacity: 0;
+    list-style: none;
+    animation: sectionslide2 0.7s 0.5s forwards;
+}
+
+.links ul li {
+    float: left;
+    padding: 20px 20px;
+}
+
+.links ul li a{
+    padding: 20px;
+    background-color: var(--accent-color);
+    border-radius: 9999px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+
+}
+
+footer {
+    height: 50px;
+    background-color: var(--other-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0px;
+}
